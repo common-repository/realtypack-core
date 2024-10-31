@@ -1,0 +1,106 @@
+/**
+ * Loads neccessary Mixins and Variables Shared in both.
+ * 
+ * @since 1.0 
+ * 
+ */
+
+@import '../../../../../themes/RealtyPack/lib/assets/sass/lib.scss';
+
+.rtpc-hide {
+    display: none !important;
+}
+
+.elementor-element .realtypack-flag::after {
+    content: "RealtyPack";
+}
+
+.elementor-element .realtypack-flag:after,
+.elementor-element .auxin-badge-pro:after,
+.auxin .elementor-element .icon .bdt-widget-icon:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: 3px 4px 2px;
+    border-style: solid;
+    font-weight: 600;
+    @include font-size(9);
+    text-align: right;
+    border-width: 0 0 1px 1px;
+    border-color: #eee;
+    border-bottom-left-radius: 2px;
+    text-transform: uppercase;
+    font-family: "Open Sans", Roboto, Helvetica, Arial, sans-serif;
+}
+
+// .elementor-control-RealtyPack_custom_css_section:after {
+//     content: "RealtyPack";
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     z-index: 1;
+//     padding: 2px 3px 3px;
+//     border-style: solid;
+//     font-weight: 600;
+//     font-size: 10px;
+//     text-align: right;
+//     border-width: 0 0 1px 1px;
+//     border-color: #eee;
+//     border-bottom-left-radius: 2px;
+//     text-transform: uppercase;
+//     font-family: "Poppins";
+// }
+
+
+
+@import 'button';
+
+@import 'iconbox';
+
+@import 'testimonial';
+
+@import 'recent-posts-grid-slider';
+
+@import 'our-agents';
+
+@import 'recent-posts';
+
+@import 'property-listing-carousal';
+
+@import 'newsletter';
+
+@import 'agencylist';
+
+@import 'agent-list';
+
+// Property Search Widget Styles
+@import 'listing-search';
+
+// counter Widget Styles
+@import 'counter';
+
+@import 'iconbox-carousel';
+
+@import 'pricing';
+
+@import 'place';
+
+@import 'property-list';
+
+@import 'recent-viewed';
+
+// Single Property Styles
+@import 'single-property/single-property';
+
+// Single Agency Styles
+@import 'single-agency/single-agency';
+
+// Single Agent Styles
+@import 'single-agent/single-agent';
+
+
+// Login Styles
+@import 'login-register/login';
+
+@import 'login-register/register';

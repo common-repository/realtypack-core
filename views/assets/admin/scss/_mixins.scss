@@ -1,0 +1,67 @@
+// Media Generator
+@mixin respond-to($media){
+    @media #{$media}{
+        @content
+    }
+}
+
+// For Small Phone ( Portrait and Landscape )
+@mixin for-small-phone{
+    @include respond-to($small-phone){
+        @content;
+    }
+}
+
+// For Phone ( Portrait and Landscape )
+@mixin for-phone{
+    @include respond-to($phone){
+        @content;
+    }
+}
+
+// For Tablet( Portrait Only )
+@mixin for-tablet{
+    @include respond-to($tablet-portrait){
+        @content;
+    }
+}
+
+// For Tablet ( Tablet and Portrait Desktop  )
+@mixin for-tablet-land{
+    @include respond-to($tablet-landscape-desktop){
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape-big{
+    @include respond-to($tablet-landscape){
+        @content;
+    }
+}
+
+// For all non large desktop devices ( Large Desktop  )
+@mixin for-all-non-desktop-devices{
+    @include respond-to($all-non-desktop-devices){
+        @content;
+    }
+}
+
+// For Desktop ( Large Desktop  )
+@mixin for-desktop{
+    @include respond-to($desktop){
+        @content;
+    }
+}
+// For Desktop ( Large Desktop  )
+@mixin for-large-desktop{
+    @include respond-to($large-desktop){
+        @content;
+    }
+}
+
+// For Retina Desplay ( Large Desktop  )
+@mixin for-retina{
+    @include respond-to($retina){
+        @content;
+    }
+}

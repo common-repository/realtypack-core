@@ -1,0 +1,25 @@
+.rtpc-unit-switcher {
+    .wpl_unit_switcher_activity {
+        .chosen-container {
+            width: 100% !important;
+
+            &:after {
+                content: "\e1f8" !important;
+                font-family: "rtp-fontastic";
+                position: absolute;
+                right: 5px;
+                top: 12px;
+                background: $white-color;
+                width: 23px;
+                font-size: 13px;
+                line-height: 23px;
+            }
+
+            .chosen-single {
+                height: 50px;
+                padding: 0 0 0 20px;
+                line-height: 50px;
+            }
+        }
+    }
+}

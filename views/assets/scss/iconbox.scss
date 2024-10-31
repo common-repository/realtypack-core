@@ -1,0 +1,22 @@
+.elementor-widget-rtp-icon-box {
+    .elementor-widget-container {
+        position: relative;
+        z-index: 1;
+
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            transition: opacity 0.3s linear;
+            opacity: 0;
+        }
+
+        .elementor-icon {
+            transition: 0s;
+        }
+    }
+}

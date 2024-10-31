@@ -1,0 +1,42 @@
+@import "featured-image-logo";
+
+@import "title";
+
+@import "details";
+
+
+// Description Widget
+.rtpc-single-agency-description {
+    @include font-size(16);
+    font-weight: $regular;
+    color: #464646;
+}
+
+@import "contact";
+
+// Statistics Widget
+.rtpc-single-agency-statistics {
+    display: flex;
+
+    div {
+        margin-right: 60px;
+        @include font-size(22);
+        color: #181818;
+    }
+}
+
+// Socials Widget
+.rtpc-single-agency-socials {
+    display: flex;
+    flex-wrap: wrap;
+
+    .rtpc-single-agency-social-icon {
+        margin-right: 15px;
+        cursor: pointer;
+        border-radius: 50%;
+
+        i {
+            @include font-size(19);
+        }
+    }
+}

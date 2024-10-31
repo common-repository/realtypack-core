@@ -1,0 +1,252 @@
+.rtpc-sp-agent-info-container {
+    .rtpc-sp-agent-info {
+        margin: 0px 10px;
+        display: flex;
+
+        .rtp-row {
+            margin: 0px;
+        }
+
+        .rtpc-sp-agent-image {
+
+            width: 100%;
+            max-width: 330px;
+            height: 320px;
+            border: 1px solid #D5D5D5;
+            border-radius: 5px;
+        }
+
+        .rtpc-sp-agent-details {
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+            @include font-size(16);
+            width: 100%;
+
+            .rtpc-sp-agent-details-container {
+                width: 100%;
+
+                div:first-child {
+                    display: inline-block;
+                }
+
+                .rtp-main-button-blue {
+                    float: right;
+                }
+
+                .rtpc-sp-agent-name {
+                    @include font-size(28);
+                    font-weight: 500;
+                    color: #6A11CB;
+                    display: block;
+                }
+
+                .rtpc-sp-agent-title {
+                    @include font-size(16);
+                    font-weight: $regular;
+                    color: #828282;
+                    margin-bottom: 20px;
+                    display: block;
+                }
+
+                .rtpc-sp-agent-description {
+                    @include font-size(16);
+                    font-weight: $regular;
+                    color: #6A6A6A;
+                }
+
+                .rtpc-sp-agent-divider {
+                    display: block;
+                    margin-bottom: 25px;
+                    border: 1px solid rgba(#000000, 0.16);
+                }
+
+                .rtpc-sp-agent-divider-column {
+                    display: none;
+                }
+
+                .rtpc-sp-agent-email {
+                    margin-top: 25px;
+                    margin-bottom: 20px;
+                }
+
+                .rtpc-sp-agent-phone-label,
+                .rtpc-sp-agent-email-label,
+                .rtpc-sp-agent-social-label {
+                    @include font-size(16);
+                    font-weight: $regular;
+                    opacity: .7;
+                    padding-right: 10px;
+                }
+
+                .rtpc-sp-agent-phone-number,
+                .rtpc-sp-agent-email-address,
+                .rtpc-sp-agent-social-icons {
+                    @include font-size(17);
+                    font-weight: $regular;
+                }
+
+                .rtpc-sp-agent-social {
+                    display: inline-flex;
+
+                    .rtpc-sp-agent-social-label {
+                        display: none;
+                    }
+
+                    .rtpc-sp-agent-social-icons {
+                        @include text-middle(50);
+                        margin: 20px 10px;
+                        font-family: "rtp-fontastic";
+                        border-radius: 50%;
+                        box-shadow: 0 3px 20px rgba(#000000, 0.15);
+
+                        &:first-child {
+                            margin-left: 0px;
+                        }
+
+                        i {
+                            color: $default-purple;
+                        }
+
+                        &:hover {
+                            background: linear-gradient(180deg, $default-lblue, $default-purple);
+                            box-shadow: 0 5px 20px rgba(#3271F6, 0.5);
+
+                            i {
+                                color: $white-color;
+                            }
+                        }
+                    }
+                }
+
+                .rtpc-sp-agent-property-listed {
+                    float: right;
+                    margin-top: 30px;
+                    color: $black-color;
+                }
+
+                .rtpc-sp-agent-property-more-detail {
+                    display: none;
+                }
+
+                .rtpc-sp-agent-contact-content {
+                    font-weight: 500;
+                    color: rgba(70, 70, 70, 0.7);
+
+                }
+            }
+        }
+
+        .rtpc-sp-agent-header {
+            padding-bottom: 20px;
+
+
+            .rtpc-sp-agent-description {
+                @include font-size(16);
+                font-weight: 400;
+                color: #6A6A6A;
+                margin-bottom: 20px;
+            }
+
+            .rtpc-sp-agent-readmore {
+                text-align: center;
+                white-space: nowrap;
+            }
+        }
+
+        .rtpc-sp-agent-contacts {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px 0;
+            margin: 0 15px;
+            border-top: 1px solid rgba(112, 112, 112, .25);
+        }
+
+
+
+
+        .rtpc-sp-agent-footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 14px 0;
+
+            .rtpc-sp-agent-agent-list {
+                padding-top: 20px;
+
+                a {
+                    margin: 0 7px;
+                    padding-top: 5px;
+                    display: inline-flex;
+
+                    img {
+                        width: 55px;
+                        height: 55px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .rtpc-sp-agent-listed-properties {
+                a {
+                    color: #6A11CB;
+                    @include font-size(17);
+                    font-weight: 400;
+                }
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+            * {
+                text-align: center;
+            }
+
+            .rtpc-sp-agent-contacts {
+                justify-content: center;
+
+                .rtpc-sp-agent-details {
+                    padding: 10px 20px !important;
+
+                    span {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 440px) {
+            .rtpc-sp-agent-details {
+                padding: 10px 0px !important;
+            }
+        }
+    }
+
+    .rtpc-sp-agent-contact-form {
+        margin-top: 72px;
+        margin-left: 11px;
+
+        .rtpc-sp-agent-contact-form-title {
+            @include font-size(26);
+            font-weight: $medium;
+            margin-bottom: 16px;
+        }
+
+        input {
+            padding: 12px 20px;
+            max-width: 33%;
+            min-width: 340px;
+            margin-right: 25px;
+            width: auto;
+        }
+
+        textarea {
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .rtp-main-button-blue {
+            margin-top: 40px;
+        }
+    }
+}

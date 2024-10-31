@@ -1,0 +1,38 @@
+/* Colors */
+$main-color: #2B7FFC;
+$second-color:#6A11CB;
+$third-color: #0D00C5;
+
+$white-color: #ffffff;
+$black-color: #000000;
+$black-color-2: #181818;
+$green-color: #18A138;
+$dark-gray-color:#9f9f9f;
+$light-gray-color: #f2f2f2;
+$gray-color: #dddddd;
+$green-color: #2BB702;
+$red-color: #F62929;
+$blue-color: #4D6EF5;
+$orange-color: #F97B1B;
+$pink-color: #E62176;
+
+$text-color: #252525;
+$content-color: #707070;
+$content-color-2:#8b8b8b;
+$content-color-3: #818181;
+
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+$poppins-font: "Poppins";
+
+
+/* Device widths */
+$small-phone: '(max-width: 320px)';
+$phone: '(max-width: 480px)';
+$tablet-portrait: '(max-width: 768px)';
+$tablet-landscape-desktop: '(min-width: 769px) and (max-width: 999px)';
+$desktop: '(min-width: 1000px) and (max-width: 1599px)';
+$large-desktop: '(min-width: 1600px)';
+$non-retina: 'screen and (-webkit-max-device-pixel-ratio: 1)';
+$retina: 'screen and (-webkit-min-device-pixel-ratio: 2)';

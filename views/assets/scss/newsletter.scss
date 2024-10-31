@@ -1,0 +1,55 @@
+.rtpc-newsletter-container {
+    text-align: center;
+
+    form {
+        display: inline-grid;
+        position: relative;
+        width: 450px;
+        max-width: 96%;
+
+        input {
+            width: 100%;
+            border: 0px solid;
+            border-radius: 30px;
+            box-shadow: 0 3px 35px #00000040;
+            padding: 0 32px;
+            height: 52px;
+            background: rgba(255, 255, 255, 0.3);
+            @include font-size(15);
+
+            @include for-phone {
+                padding: 0 25px;
+                height: 44px;
+            }
+        }
+
+        button {
+            position: absolute;
+            right: 0;
+            z-index: 2;
+            margin: 4px 4px;
+            border-radius: 30px;
+            border: 0px;
+            padding: 0px 23px;
+            height: 44px;
+            @include font-size(16);
+            outline: none;
+
+            @include for-phone {
+                height: 36px;
+            }
+        }
+
+        .rtpc-message {
+            transform: translateY(10px);
+
+            &.rtpc-success-msg {
+                color: #39e62c;
+            }
+
+            &.rtpc-failure-msg {
+                color: #f76e6e;
+            }
+        }
+    }
+}

@@ -1,0 +1,151 @@
+.our-agents-container {
+    overflow: hidden;
+    position: relative;
+
+    .swiper-slide {
+        padding: 0 10px;
+        text-align: center;
+        position: relative;
+
+        img {
+            border-radius: 15px;
+        }
+
+        .our-agents-image {
+            // position: absolute;
+            // width: calc(100% - 25px);
+            // height: 100%;
+            // top: 0;
+            // left: 15px;
+        }
+
+        .our-agents-details {
+            background: linear-gradient(140deg, #2B7FFC, #6A11CB);
+            border-radius: 15px;
+            padding: 10px 42px 10px 42px;
+            text-align: left;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0 10px;
+            opacity: 0;
+            color: $white-color;
+            transition: $transition-normal;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            &:hover {
+                opacity: 0.95;
+                transition: $transition-normal;
+            }
+
+            .our-agents-details-container {
+                width: 100%;
+
+                div {
+                    width: 100%;
+                }
+
+                .our-agents-name {
+                    @include font-size(28);
+                    font-weight: 500;
+                    display: block;
+                    padding-bottom: 5px;
+                }
+
+                .our-agents-phone {}
+
+                .our-agents-title {
+                    @include font-size(18);
+                    font-weight: 300;
+                    opacity: 0.8;
+                    opacity: .7;
+                }
+
+                .our-agents-phone,
+                .our-agents-email,
+                .our-agents-social {
+                    line-height: 38px;
+                }
+
+                .our-agents-phone-label,
+                .our-agents-email-label,
+                .our-agents-social-label {
+                    @include font-size(18);
+                    font-weight: 300;
+                    opacity: 0.8;
+                    opacity: .7;
+                    padding-right: 10px;
+                    font-family: "Poppins";
+                }
+
+                .our-agents-phone-number,
+                .our-agents-email-address,
+                .our-agents-social-icons {
+                    @include font-size(18);
+                    font-weight: 300;
+                    opacity: 1;
+                    font-family: "Poppins";
+                    color: $white-color;
+                    margin-right: 7px;
+                }
+
+                .our-agents-divider {
+                    display: block;
+                    margin-top: 18px;
+                    margin-bottom: 28px;
+                    border: 1px solid #FFFFFF30;
+                    width: 100%;
+
+                    &:nth-of-type(2) {
+                        margin-top: 28px;
+                        margin-bottom: 25px;
+                    }
+                }
+
+                .rtpc-agent-property-more-detail {
+                    float: right;
+                    color: $white-color;
+                    font-weight: $regular;
+                    @include font-size(16);
+                    text-decoration: underline;
+                }
+
+                .our-agents-property-listed {
+                    font-weight: $regular;
+                    @include font-size(16);
+                    text-decoration: underline;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    //---------------------- Pagination
+    .our-agents-pagination {
+        text-align: center;
+        padding-top: 85px;
+
+        .our-agents-swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(180deg, #2B7FFC, #6A11CB);
+            border-radius: 45px;
+            display: inline-flex;
+            margin: 0 5px;
+        }
+
+        .our-agents-swiper-pagination-bullet-active {
+            width: 13px;
+            height: 24px;
+        }
+    }
+
+
+
+    //--End
+}

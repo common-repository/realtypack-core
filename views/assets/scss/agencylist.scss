@@ -1,0 +1,238 @@
+.rtpc-agency-list-container {
+    margin: 0px;
+    box-shadow: 0 3px 25px rgba(0, 0, 0, 0.14);
+    padding: 50px;
+    margin-bottom: 60px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include for-desktop {
+        padding: 35px;
+    }
+
+    @include for-phone {
+        padding: 20px 10px;
+    }
+
+    .rtp-row {
+        margin: 0px;
+    }
+
+    .rtpc-agency-image {
+        padding: 0px;
+
+        @include for-tablet {
+            margin-bottom: 15px;
+        }
+
+        @include for-tablet {
+            width: 100%
+        }
+
+        img {
+            height: 100%;
+            max-width: 305px;
+            max-height: 320px;
+            border: 1px solid #D5D5D5;
+            border-radius: 5px;
+            object-fit: cover;
+
+            @include for-desktop {
+                width: 100%;
+            }
+        }
+    }
+
+    .rtpc-agency-content {
+        padding: 0px;
+
+        @include for-desktop {
+            padding-left: 20px;
+        }
+
+        @include for-phone {
+            padding: 0 10px;
+        }
+    }
+
+    .rtpc-agency-header {
+        padding-bottom: 28px;
+        display: flex;
+
+        @include for-desktop {
+            padding-bottom: 23px;
+        }
+
+        @include for-phone {
+            flex-wrap: wrap;
+        }
+
+        .rtpc-agency-title {
+            margin-bottom: 10px;
+
+            @include for-tablet {
+                text-align: left;
+            }
+
+            @include for-phone {
+                float: left;
+            }
+
+            a {
+                @include font-size(29);
+                font-weight: $medium;
+                color: #6A11CB;
+
+                @include for-desktop {
+                    @include font-size(25);
+                }
+            }
+        }
+
+        .rtpc-agency-address {
+            @include font-size(16);
+            font-weight: $regular;
+            color: #828282;
+            float: left;
+
+            @include for-desktop {
+                @include font-size(14);
+            }
+        }
+
+        .rtpc-agency-listed-properties {
+            margin-left: auto;
+            padding-top: 8px;
+
+            @include for-desktop {
+                padding-top: 5px;
+            }
+
+            a {
+                color: #6A11CB;
+                @include font-size(17);
+                font-weight: $regular;
+
+                @include for-desktop {
+                    @include font-size(15);
+
+                }
+            }
+        }
+    }
+
+    .rtpc-agency-contacts {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        border-top: 1px solid rgba(112, 112, 112, .25);
+        border-bottom: 1px solid rgba(112, 112, 112, .25);
+
+        @include for-desktop {
+            padding: 16px 0;
+        }
+
+        .rtpc-agency-details {
+            padding: 10px 52px 10px 0;
+            @include font-size(16);
+            display: flex;
+
+            @include for-desktop {
+                padding: 8px 45px 8px 0;
+            }
+
+            @include for-tablet {
+                padding: 10px 30px 10px 0 !important;
+
+                span {
+                    display: block;
+                }
+            }
+
+            @include for-phone {
+                padding: 10px 0px !important;
+            }
+
+            i {
+                padding: 0 8px;
+                color: #000000;
+
+                &:hover {
+                    color: #6A11CB !important;
+                }
+            }
+
+            .rtpc-agency-contact-title {
+                padding-right: 10px;
+                color: rgba(#464646, .7);
+                font-weight: $regular;
+            }
+
+            .rtpc-agency-contact-content {
+                font-weight: $regular;
+                color: #000000;
+            }
+        }
+    }
+
+    .rtpc-agency-footer {
+        display: flex;
+        align-items: center;
+
+        @include for-phone {
+            flex-wrap: wrap;
+        }
+
+        .rtpc-agency-agent-list {
+            padding-top: 25px;
+            display: flex;
+
+            @include for-desktop {
+                padding-top: 18px;
+            }
+
+            @include for-phone {
+                flex-wrap: wrap;
+            }
+
+            a {
+                margin: 0 7px;
+                padding-top: 5px;
+                display: inline-flex;
+
+                img {
+                    width: 55px;
+                    height: 55px;
+                    border-radius: 50%;
+
+                    @include for-desktop {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+
+        .rtpc-agency-readmore {
+            text-align: center;
+            padding-top: 25px;
+            margin-left: auto;
+
+            @include for-phone {
+                padding: 20px 0;
+            }
+
+            a {
+                white-space: nowrap;
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        * {
+            text-align: center;
+        }
+    }
+}

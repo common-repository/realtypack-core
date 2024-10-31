@@ -1,0 +1,35 @@
+.rtpc-single-agent-details-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .rtpc-single-agent-detail {
+        @include font-size(18);
+        font-weight: $regular;
+        margin-bottom: 12px;
+        padding-right: 60px;
+
+        label {
+            color: rgba(#464646, 0.7);
+        }
+
+        span {
+            color: $black-color;
+        }
+
+        a {
+            &:hover {
+                span {
+                    color: $default-purple;
+                }
+            }
+        }
+    }
+
+    .rtpc-single-agent-listed-properties {
+        margin-top: 15px;
+        width: 100%;
+        @include font-size(20);
+        color: $default-purple;
+        display: block;
+    }
+}

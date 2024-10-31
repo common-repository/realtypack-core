@@ -1,0 +1,73 @@
+.rtpc-single-property-title-box {
+    .rtpc-single-property-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .rtpc-single-property-title-text {
+            @include font-size(34);
+            font-weight: $regular;
+        }
+
+        .rtpc-single-property-cat {
+            color: $white-color;
+            background: $default-purple;
+            padding: 0 15px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            height: 25px;
+        }
+    }
+
+    .rtpc-single-property-price {
+        display: flex;
+
+        .rtpc-single-property-price-text {
+            @include font-size(40);
+            color: $default-purple;
+            font-weight: $semi-bold;
+        }
+
+        .rtpc-single-property-unit {
+            @include font-size(21);
+            font-weight: $semi-bold;
+            margin: 12px 25px;
+        }
+    }
+
+    .rtpc-single-property-address {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 7px;
+
+        .rtpc-single-property-address-text {
+            @include font-weight(17);
+            color: #828282;
+
+            @include for-phone {
+                line-height: 24px;
+            }
+
+            i {
+                font-size: 26px;
+                position: absolute;
+                margin-top: -4px;
+            }
+
+            span {
+                margin-left: 30px;
+            }
+        }
+
+        .rtpc-single-property-visit {
+            margin: 5px 10px;
+            color: #B8B8B8;
+            display: flex;
+
+            i {
+                padding-right: 5px;
+            }
+        }
+    }
+}

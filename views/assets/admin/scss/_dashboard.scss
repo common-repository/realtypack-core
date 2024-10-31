@@ -1,0 +1,427 @@
+.rtp-acf-page-layout .acf-radio-list li:first-child {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+
+.rtp-acf-page-layout .acf-radio-list label {
+    margin-right: 5px;
+}
+
+.rtp-acf-page-layout .acf-radio-list label input {
+    opacity: 0;
+}
+
+.rtp-acf-page-layout .acf-radio-list li:first-child label input {
+    opacity: 1;
+}
+
+.rtp-acf-page-layout .acf-radio-list .selected img {
+    box-shadow: 0px 0px 0px 3px #78b6d0;
+}
+
+a.toplevel_page_realty-pack-core {
+    .dashicons-before:before {
+        content: "";
+        background: url("../img/logo-admin-menu.svg") no-repeat;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        box-sizing: border-box;
+    }
+}
+
+/*Body Class: rtpc-admin-panel */
+.rtpc-admin-panel .rtpc-admin {
+    font-family: $poppins-font;
+    line-height: 25px;
+    font-size: 16px;
+
+    &.hide-notices {
+
+        .notice-warning,
+        .update-nag {
+            display: none;
+        }
+    }
+
+    ul,
+    li {
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+            color: $main-color;
+        }
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+/*Main Container*/
+.rtpc-admin {
+    margin-left: -20px;
+}
+
+/*Header*/
+.rtpc-admin-header {
+    background: $white-color;
+    padding-top: 80px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.16);
+
+    h1 {
+        font-size: 33px;
+        line-height: 50px;
+        margin: 0;
+    }
+}
+
+.rtpc-admin-header-title {
+    position: relative;
+
+    @include for-tablet-land {
+        padding-left: 140px;
+    }
+
+    @include for-tablet {
+        padding-left: 100px;
+    }
+}
+
+.rtpc-admin-logo {
+    position: absolute;
+
+    @include for-large-desktop {
+        right: -20px;
+        top: -50px;
+    }
+
+    @include for-desktop {
+        right: -20px;
+        top: -50px;
+    }
+
+    @include for-tablet-land {
+        width: 140px;
+        left: 0;
+        top: 0;
+    }
+
+    @include for-tablet {
+        width: 100px;
+        left: 0;
+        top: 0;
+    }
+}
+
+.rtpc-admin-subtitle {
+    color: $content-color;
+}
+
+.rtpc-admin-version {
+    color: $third-color;
+    margin-top: 20px;
+}
+
+.rtpc-admin-container {
+    padding: 0 35px;
+    max-width: 1470px;
+    margin: 0 auto;
+
+    @include for-phone {
+        padding: 0 10px;
+    }
+}
+
+.rtpc-admin-nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 76px auto 0 !important;
+
+    @include for-tablet {
+        margin-top: 40px !important;
+        width: 100%;
+
+    }
+
+    &>li {
+        position: relative;
+        padding-top: 20px;
+
+        @include for-tablet {
+            width: 100%;
+            border-bottom: 1px solid #eee;
+        }
+
+        &>a {
+            padding: 16px 30px;
+            display: block;
+            color: $text-color;
+            font-size: 16px;
+
+            @include for-tablet-land {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            @include for-tablet {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            &:focus {
+                outline: 0;
+                box-shadow: none;
+            }
+        }
+
+        &.active {
+            &>a {
+                color: $main-color;
+            }
+
+            &:after {
+                content: "";
+                height: 4px;
+                width: 100%;
+                display: block;
+                background-color: #2b7ffc;
+                background: linear-gradient(to right, $main-color 0%, $second-color 100%);
+                box-shadow: 0 3px 17px $main-color;
+            }
+        }
+    }
+}
+
+/*Statistics*/
+.rtpc-admin-chart-statistics {
+    padding: 40px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    background: linear-gradient(to right, #ddd 0%, #eee 100%);
+    color: $white-color;
+    position: relative;
+    padding-left: 80px;
+
+    .number {
+        font-size: 30px;
+        display: block;
+    }
+
+    .label {
+        display: block;
+    }
+
+    .rtpc-admin-icon {
+        position: absolute;
+        left: 40px;
+        top: 40px;
+    }
+
+    &.pink {
+        background: linear-gradient(to right, #d651d3 0%, #f0449e 100%);
+    }
+
+    &.orange {
+        background: linear-gradient(to right, #ea6f52 0%, #f88f2a 100%);
+    }
+
+    &.purple {
+        background: linear-gradient(to right, #813aff 0%, #c571ff 100%);
+    }
+
+    &.green {
+        background: linear-gradient(to right, #3bb5b0 0%, #4ce57e 100%);
+    }
+}
+
+.rtpc-admin-changelog {
+    color: $content-color;
+
+}
+
+.rtpc-admin-changelog-version {
+    margin-bottom: 20px;
+
+    .title {
+        font-weight: bold;
+
+        &:before {
+            content: "";
+            height: 5px;
+            width: 5px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+            background-color: $content-color;
+        }
+    }
+
+    .list {
+        margin-left: 10px;
+        color: $content-color-2;
+    }
+}
+
+/*Form*/
+.rtpc-admin-activation-form {
+    display: flex;
+    float: left;
+    border-radius: 25px;
+    box-shadow: 0 3px 25px rgba(0, 0, 0, 0.12);
+    background-color: $white-color;
+    margin-right: 30px;
+
+    @include for-tablet {
+        width: 100%
+    }
+
+    &:focus {
+        border-color: #000;
+    }
+
+    input {
+        border: 0;
+        background: none;
+        box-shadow: none;
+        padding: 15px 30px;
+        width: 300px;
+        outline: none !important;
+
+        @include for-tablet {
+            width: 100%
+        }
+
+        &:focus {
+            outline: none !important;
+            box-shadow: unset;
+        }
+    }
+}
+
+.rtpc-admin-activation-form-submit {
+    color: $main-color;
+    text-transform: uppercase;
+    width: 120px;
+    box-sizing: border-box;
+    border: 0;
+    background: none;
+    box-shadow: none;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.rtpc-admin-activation {
+    margin-top: 50px;
+
+    @include for-tablet {
+        margin-top: 30px;
+    }
+
+    .rtpc-admin-msg {
+        float: left;
+    }
+}
+
+.rtpc-admin-msg {
+    padding: 15px 10px;
+}
+
+.rtpc-admin-success-msg {
+    color: #09AE2A;
+}
+
+.rtpc-admin-error-msg {
+    color: #E51B60;
+}
+
+/*Toturial*/
+.rtpc-admin-box-colorful {
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 30px;
+
+    h3 {
+        color: $white-color;
+    }
+
+    p {
+        opacity: 0.7;
+    }
+
+    &:after {
+        border-radius: 10px;
+        content: "";
+        opacity: 0.9;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+    }
+
+    &.gradiant-blue {
+        &:after {
+            background: linear-gradient(to right, #408AF6 0%, #8D35EE 100%);
+        }
+
+        .rtpc-admin-btn {
+            background: linear-gradient(to right, #2B7FFC 0%, #6A11CB 100%);
+        }
+    }
+
+    &.gradiant-pink {
+        &:after {
+            background: linear-gradient(to right, #F94472 0%, #AA0481 100%);
+        }
+
+        .rtpc-admin-btn {
+            background: linear-gradient(to right, #ff4a89 0%, #d91739 100%);
+        }
+    }
+
+    &.support-forum {
+        background-image: url("../img/hispanic-woman-working-in-a-call-centre-smiling-4YHXA7J@2x.jpg");
+        background-size: cover;
+    }
+
+    &.documentation {
+        background-image: url("../img/female-office-workers-using-laptop-and-writing-LGAS6Z7@2x.jpg");
+        background-size: cover;
+    }
+}
+
+.rtpc-admin-box-colorful-inner {
+    border: 4px solid $white-color;
+    border-radius: 10px;
+    padding: 40px 50px;
+    position: relative;
+    z-index: 3;
+    color: $white-color;
+}
+
+.rtpc-admin-box-colorful-title {
+    margin: 0 0 20px 0;
+    line-height: 40px;
+    color: $white-color;
+    font-size: 30px;
+}
+
+.rtpc-admin-box-colorful-content {
+    margin-bottom: 40px;
+    line-height: 25px;
+}
+
+.rtpc-admin-box-video {
+    padding: 10px;
+    background-color: $white-color;
+    margin-bottom: 20px;
+}

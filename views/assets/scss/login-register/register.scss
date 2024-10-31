@@ -1,0 +1,217 @@
+.rtpc-register-box {
+    position: relative;
+    width: 900px;
+
+    @include for-tablet {
+        width: 100%;
+    }
+
+    .rtpc-register-box-container {
+        display: flex !important;
+        align-items: center;
+
+        .rtpc-register-image-holder {
+            width: 43%;
+
+            @include for-phone {
+                width: 0px;
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .rtpc-register-data-holder {
+            width: 57%;
+            padding: 20px 45px;
+
+            @include for-phone {
+                width: 100%;
+            }
+
+            h3 {
+                @include font-size(34);
+                color: $default-purple;
+                font-weight: $semi-bold;
+                margin-top: 0px;
+            }
+
+            input[type='text'],
+            input[type='password'],
+            select {
+                display: block;
+                border-radius: 25px;
+                border: 0;
+                background: #F3F3F3;
+                width: 100%;
+                padding: 11px 23px;
+                margin: 23px 0px 0 0;
+                color: #9A9A9A;
+                @include font-size(15);
+                font-weight: $light;
+                appearance: none;
+                outline: none;
+            }
+
+            .rtpc-register-select {
+                position: relative;
+
+                &:after {
+                    content: "\e1f8" !important;
+                    font-family: "rtp-fontastic";
+                    position: absolute;
+                    right: 25px;
+                    pointer-events: none;
+                    font-size: 13px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                select {
+                    option {
+                        appearance: none;
+                        outline: none;
+                        padding: 11px 23px;
+                    }
+                }
+            }
+
+            .rtpc-register-controls {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+
+                .rtpc-agree-term {
+                    display: flex;
+                    color: #828282;
+                    @include font-size(15);
+                    align-items: center;
+
+                    input {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    a {
+                        margin-left: 10px;
+                        color: #3E3E3E;
+                        @include font-size(15);
+                        font-weight: $regular;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    @include font-size(16);
+                    font-weight: $regular;
+                }
+            }
+
+            .rtpc-register-two-div {
+                display: flex;
+
+                input:first-child {
+                    margin-right: 15px;
+                }
+            }
+
+            .rtpc-register-button {
+                background: linear-gradient(180deg, #2B7FFC, #6A11CB);
+                border-radius: 5px;
+                height: 42px;
+                @include font-size(16);
+                font-weight: $regular;
+                width: 100%;
+                margin: 35px 0 30px 0;
+                cursor: pointer;
+                box-shadow: unset !important;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    margin-right: 15px;
+                }
+
+                &::before {
+                    background: linear-gradient(180deg, #434343, #111111);
+                    border-radius: 5px;
+                    box-shadow: unset !important;
+                }
+
+                &:after {
+                    width: 0;
+                }
+
+                a {
+                    padding: 0px;
+                }
+
+                &.rtpc-register-google,
+                &.rtpc-register-facebook {
+                    background: $white-color;
+                    color: $black-color;
+                    border: 1px solid #7D7D7D;
+
+                    a {
+                        color: $black-color;
+                    }
+
+                    &::before {
+                        background: #2B7FFC;
+                    }
+
+                    &:hover {
+                        border: 0px;
+
+                        a {
+                            color: $white-color;
+                        }
+                    }
+                }
+
+                &.rtpc-register-facebook {
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                }
+
+                &.rtpc-register-google {
+                    margin-top: 35px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .rtpc-register-divider {
+                height: 1px;
+                background: rgba(#707070, .2);
+                display: block;
+                position: relative;
+
+                span {
+                    position: absolute;
+                    top: -12px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    @include font-size(16);
+                    font-weight: $light;
+                    color: #707070;
+                    width: 36px;
+                    text-align: center;
+                    background: $white-color;
+                }
+            }
+
+            .rtpc-register {
+                @include font-size(15);
+                font-weight: $light;
+                margin-top: 20px;
+
+                a {
+                    text-decoration: underline;
+                    color: $default-purple;
+                }
+            }
+        }
+    }
+}

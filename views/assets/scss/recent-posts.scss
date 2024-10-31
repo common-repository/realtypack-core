@@ -1,0 +1,156 @@
+.rtpc-our-blog-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .rtpc-our-blog-post {
+        width: 33.33%;
+        padding: 0 15px;
+        padding-bottom: 30px;
+
+
+        // &:first-child {
+        //     padding: 0 15px 0 0;
+        // }
+
+        // &:last-child {
+        //     padding-right: 0 0 0 15px;
+        // }
+
+        .rtpc-our-blog-post-image {
+            img {
+                border-radius: 5px;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .rtpc-our-blog-post-details {
+            position: relative;
+            transition: $transition-normal;
+            background: $white-color;
+            border-radius: 5px;
+            box-shadow: 0 8px 35px #00000014;
+            padding: 33px 40px;
+            margin: -75px 41px 0 41px;
+            z-index: 1;
+
+            @include for-phone {
+                margin: -75px 10px 0 10px;
+                padding: 25px 30px;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                border-radius: 5px;
+                background: linear-gradient(116deg, #2B7FFC, #6A11CB);
+                box-shadow: 0 8px 35px #00000014;
+                z-index: -1;
+                transition: opacity $transition-normal linear;
+                opacity: 0;
+            }
+
+            //transition: 0.3s;
+
+            .rtpc-our-blog-post-details-header {
+                @include font-size(14);
+                color: #7E7E7E;
+                display: inline-flex;
+                justify-content: space-between;
+                width: 100%;
+                font-weight: 400;
+                transition: $transition-normal;
+
+
+                span {
+                    width: 100%;
+                    border-right: 1px solid;
+                    border-color: #7E7E7E;
+                    padding-left: 5px;
+                    padding-right: 5px;
+
+                    &:last-child {
+                        border: 0px;
+                    }
+
+                    &:nth-child(2) {
+                        text-align: center;
+                    }
+
+                    &:nth-child(3) {
+                        text-align: center;
+                    }
+                }
+            }
+
+            .rtpc-our-blog-post-divider {
+                width: 70px;
+                height: 2px;
+                background: #6A11CB;
+                box-shadow: 0px 3px 8px #6A11CB;
+                display: block;
+                margin-top: 20px;
+                margin-bottom: 19px;
+                transition: $transition-normal;
+
+            }
+
+            .rtpc-our-blog-post-title {
+                color: #181818;
+                @include font-size(26);
+                color: #181818;
+                font-family: 'Poppins';
+                font-weight: $medium;
+                line-height: 36px;
+
+                a {
+                    color: inherit;
+                }
+
+            }
+
+        }
+
+        &:hover {
+            transition: $transition-normal;
+
+            .rtpc-our-blog-post-details {
+
+                transform: translateY(-40px);
+                transition: $transition-normal;
+                position: relative;
+
+                &::before {
+                    opacity: 1;
+                    transition: $transition-normal;
+                }
+
+                .rtpc-our-blog-post-details-header {
+                    transition: $transition-normal;
+                    color: #FFFFFF;
+                    opacity: .75;
+
+                    span {
+                        border-color: #BFBFBF;
+                    }
+
+                }
+
+                .rtpc-our-blog-post-title {
+                    color: #FFFFFF;
+                }
+
+                .rtpc-our-blog-post-divider {
+                    transition: $transition-normal;
+                    background: #FFFFFF;
+                    box-shadow: 0 3px 8px #6A11CB;
+                    opacity: 0.40;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.rtpc-sp-attachments {
+    .wpl_attachments_list_container {
+        display: flex;
+
+        .wpl_attachments_room {
+            width: 33.33%;
+            border-radius: 5px;
+            padding: 25px 40px 0px 40px;
+
+            &:hover {
+                box-shadow: 0 3px 35px rgba(#000000, 0.16);
+            }
+
+            @include for-tablet {
+                width: 50%;
+            }
+
+            @include for-phone {
+                width: 100%;
+            }
+
+            a,
+            span {
+                display: block;
+                padding-left: 60px;
+            }
+
+            a {
+                color: #181818;
+                font-weight: $medium;
+                @include font-size(23);
+                line-height: 28px;
+            }
+
+            span {
+                @include font-size(17);
+                font-weight: $regular;
+                color: #464646;
+            }
+
+            &:before {
+                content: "\e06d";
+                font-family: "rtp-fontastic";
+                @include font-size(50);
+                position: absolute;
+                color: $default-lblue;
+            }
+
+            &.type_zip:before {
+                content: "\e348";
+            }
+
+            &.type_pdf:before {
+                content: "\e074";
+            }
+
+            &.type_doc:before {
+                content: "\e079";
+            }
+
+            &.type_excel:before {
+                content: "\e071";
+            }
+
+            &.type_mp3:before {
+                content: "\e06f";
+            }
+
+            &.type_powerpoint:before {
+                content: "\e075";
+            }
+        }
+    }
+}

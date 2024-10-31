@@ -1,0 +1,21 @@
+.rtpc-place {
+
+    .rtpc-place-title {
+        color: transparent;
+        font-weight: $medium;
+        @include font-size(33);
+        display: block;
+        transition: $transition-normal;
+    }
+
+    .rtpc-place-properties {
+        color: transparent;
+        font-weight: $light;
+        @include font-size(23);
+        transition: $transition-normal;
+    }
+
+    .elementor-background-overlay {
+        opacity: 0;
+    }
+}

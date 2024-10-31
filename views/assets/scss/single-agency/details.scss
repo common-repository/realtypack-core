@@ -1,0 +1,28 @@
+.rtpc-single-agency-details-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .rtpc-single-agency-detail {
+        @include font-size(19);
+        font-weight: $regular;
+        margin-bottom: 10px;
+        flex: auto;
+        padding-right: 80px;
+
+        label {
+            font-weight: $medium;
+        }
+
+        span {
+            color: #747474;
+        }
+
+        a {
+            &:hover {
+                span {
+                    color: $default-purple;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,661 @@
+.rtpc-agent-list-container {
+    overflow: hidden;
+    position: relative;
+
+    .rtpc-agent-list {
+        padding-left: 15px;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include for-phone {
+            padding-left: 0px;
+        }
+
+        .rtpc-agent-list-grid {
+            padding: 0 15px;
+            text-align: center;
+            margin: 13px 0px;
+
+            img {
+                border-radius: 15px;
+            }
+
+            .rtpc-agent-image-container {
+                .rtpc-agent-image {
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                //.rtpc-agent-container {
+                position: relative;
+                transition: $transition-normal;
+
+                &:hover {
+                    .rtpc-agent-details {
+                        opacity: 0.95;
+                        transition: $transition-normal;
+                    }
+                }
+
+                .rtpc-agent-details {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    opacity: 0;
+                    left: 0;
+                    right: 0;
+                    background: linear-gradient(140deg, #2B7FFC, #6A11CB);
+                    border-radius: 15px;
+                    transition: $transition-normal;
+
+                    .rtp-main-button-blue {
+                        display: none;
+                    }
+
+                    .rtpc-agent-details-container {
+                        color: $white-color;
+                        padding: 10px 35px;
+                        text-align: left;
+                        transition: $transition-normal;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 0;
+                        right: 0;
+
+                        @include for-desktop {
+                            padding: 5% 10%;
+                        }
+
+                        .rtpc-agent-description {
+                            display: none;
+                        }
+
+                        &:hover {
+                            opacity: 0.95;
+                        }
+
+                        .rtpc-agent-name {
+                            @include font-size(26);
+                            font-weight: 500;
+                            display: block;
+                        }
+
+                        .rtpc-agent-phone,
+                        .rtpc-agent-email,
+                        .rtpc-agent-social {
+                            margin-top: 10px;
+                        }
+
+                        .rtpc-agent-title,
+                        .rtpc-agent-phone-label,
+                        .rtpc-agent-email-label,
+                        .rtpc-agent-social-label {
+                            @include font-size(15);
+                            font-weight: $light;
+                            opacity: 0.8;
+                            padding-right: 10px;
+                        }
+
+                        .rtpc-agent-phone-number,
+                        .rtpc-agent-email-address,
+                        .rtpc-agent-social-icons {
+                            @include font-size(16);
+                            font-weight: $light;
+                        }
+
+                        .rtpc-agent-social-icons {
+                            margin-right: 10px;
+                            color: $white-color;
+
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+
+                        .rtpc-agent-divider {
+                            display: block;
+                            margin-top: 6%;
+                            margin-bottom: 9%;
+                            height: 1px;
+                            background: rgba(#FFFFFF, 0.3);
+                        }
+
+                        .rtpc-agent-footer {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .rtpc-agent-property-listed {
+                                @include font-size(15);
+                                font-weight: $regular;
+                                color: $white-color;
+                                text-decoration: underline;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            .rtpc-agent-property-more-detail {
+                                @include font-size(15);
+                                font-weight: $regular;
+                                text-decoration: underline;
+                                float: right;
+                                color: $white-color;
+
+                                &:hover {
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //}
+            }
+        }
+
+        .rtpc-agent-list-column {
+            margin: 0px 10px;
+            box-shadow: 0 3px 35px rgba(0, 0, 0, 0.14);
+            padding: 50px;
+            margin-bottom: 40px;
+            width: 96%;
+            border-radius: 10px;
+
+            @include for-tablet {
+                flex-wrap: wrap
+            }
+
+            @include for-phone {
+                padding: 30px;
+            }
+
+            .rtpc-agent-image-container {
+                display: flex;
+
+                @include for-tablet {
+                    width: 100%;
+                    text-align: center;
+                    display: block
+                }
+
+                .rtpc-agent-image {
+                    width: 100%;
+                    height: 100%;
+                    max-width: 360px;
+                    max-height: 376px;
+                    border: 1px solid #D5D5D5;
+                    border-radius: 5px;
+
+                    @include for-tablet {
+                        width: auto;
+                    }
+
+                    @include for-phone {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .rtpc-agent-details {
+                display: flex;
+                align-items: center;
+                margin-left: 30px;
+                @include font-size(16);
+                width: 100%;
+
+                @include for-tablet {
+                    margin: 20px 0 0 0;
+                }
+
+                @include for-phone {
+                    margin-top: 10px;
+                }
+
+
+                .rtpc-agent-details-container {
+                    width: 100%;
+
+                    @include for-tablet {
+                        text-align: left;
+                    }
+
+                    div:first-child {
+                        display: inline-block;
+                    }
+
+                    .rtp-main-button-blue {
+                        float: right;
+
+                        @include for-phone {
+                            transform: translateX(47%);
+                            float: none
+                        }
+                    }
+
+                    .rtpc-agent-name {
+                        @include font-size(29);
+                        font-weight: 500;
+                        color: #6A11CB;
+                        display: block;
+                    }
+
+                    .rtpc-agent-title {
+                        @include font-size(16);
+                        font-weight: $regular;
+                        color: #828282;
+                        margin-bottom: 20px;
+                        display: block;
+                    }
+
+                    .rtpc-agent-description {
+                        @include font-size(16);
+                        font-weight: $regular;
+                        color: #6A6A6A;
+                        padding-top: 5px;
+                    }
+
+                    .rtpc-agent-divider {
+                        display: block;
+                        margin-top: 35px;
+                        margin-bottom: 34px;
+                        height: 1px;
+                        background: rgba(#000000, 0.16);
+
+                        @include for-tablet {
+                            margin-top: 20px;
+                            margin-bottom: 21px;
+                        }
+                    }
+
+                    .rtpc-agent-divider-column {
+                        display: none;
+                    }
+
+
+                    .rtpc-agent-phone,
+                    .rtpc-agent-email {
+                        padding-bottom: 20px;
+
+                        @include for-phone {
+                            padding-bottom: 10px;
+                        }
+                    }
+
+                    .rtpc-agent-phone-label,
+                    .rtpc-agent-email-label,
+                    .rtpc-agent-social-label {
+                        @include font-size(16);
+                        font-weight: $regular;
+                        opacity: .7;
+                        padding-right: 10px;
+                    }
+
+                    .rtpc-agent-phone-number,
+                    .rtpc-agent-email-address,
+                    .rtpc-agent-social-icons {
+                        @include font-size(17);
+                        font-weight: $regular;
+                    }
+
+                    .rtpc-agent-social {
+                        display: inline-flex;
+                        float: left;
+
+                        .rtpc-agent-social-label {
+                            display: none;
+                        }
+
+                        .rtpc-agent-social-icons {
+                            width: 50px;
+                            height: 50px;
+                            margin: 20px 10px;
+                            font-family: "rtp-fontastic";
+                            border-radius: 50%;
+                            box-shadow: 0 3px 20px rgba(#000000, 0.15);
+                            z-index: 1;
+                            transition: $transition-normal;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            i {
+                                color: $default-purple;
+                                @include font-size(20);
+                            }
+
+                            &:hover {
+                                box-shadow: 0 5px 20px rgba(#3271F6, 0.5);
+
+                                i {
+                                    color: $white-color;
+                                }
+
+                                &::before {
+                                    opacity: 1;
+                                    transition: $transition-normal;
+                                }
+                            }
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                opacity: 0;
+                                z-index: -1;
+                                transition: $transition-normal;
+                                background: linear-gradient(180deg, $default-lblue, $default-purple);
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+
+                    .rtpc-agent-property-listed {
+                        float: right;
+                        margin-top: 15px;
+                        color: $default-purple;
+                        @include font-size(17);
+                        font-weight: $regular;
+
+                        @include for-tablet {
+                            margin-top: 0px;
+                        }
+                    }
+
+                    .rtpc-agent-property-more-detail {
+                        display: none;
+                    }
+
+                    .rtpc-agent-contact-content {
+                        font-weight: 500;
+                        color: rgba(70, 70, 70, 0.7);
+                    }
+                }
+            }
+
+            .rtpc-agent-header {
+                padding-bottom: 20px;
+
+                .rtpc-agent-description {
+                    @include font-size(16);
+                    font-weight: 400;
+                    color: #6A6A6A;
+                    margin-bottom: 20px;
+                }
+
+                .rtpc-agent-readmore {
+                    text-align: center;
+                    white-space: nowrap;
+                }
+            }
+
+            .rtpc-agent-contacts {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 20px 0;
+                margin: 0 15px;
+                border-top: 1px solid rgba(112, 112, 112, .25);
+            }
+
+            .rtpc-agent-footer {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 14px 0;
+                justify-content: flex-end;
+
+                @include for-tablet {
+                    padding: 0px;
+                }
+
+                .rtpc-agent-agent-list {
+                    padding-top: 20px;
+
+                    a {
+                        margin: 0 7px;
+                        padding-top: 5px;
+                        display: inline-flex;
+
+                        img {
+                            width: 55px;
+                            height: 55px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                .rtpc-agent-listed-properties {
+                    a {
+                        color: #6A11CB;
+                        @include font-size(17);
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+    //---------------------- Pagination
+    .rtpc-agent-pagination {
+        text-align: center;
+
+        .rtpc-agent-swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(180deg, #2B7FFC, #6A11CB);
+            border-radius: 45px;
+            display: inline-flex;
+            margin: 0 5px;
+        }
+
+        .rtpc-agent-swiper-pagination-bullet-active {
+            width: 13px;
+            height: 24px;
+        }
+    }
+
+    //--End
+
+    // ----- Grid & Column view filters
+    .rtpc-agent-filters {
+        display: flex;
+        margin: 20px 25px;
+        min-height: 50px;
+
+        .checked {
+            background: linear-gradient(272deg, #2B7FFC, #6A11CB);
+            box-shadow: 0 3px 20px #2B7FFC;
+            color: $white-color;
+            z-index: 2;
+        }
+
+        label {
+            background: #FFFFFF;
+            z-index: 10;
+            @include font-size(18);
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            color: #777;
+            cursor: pointer;
+            transition: background .3s;
+            box-shadow: 0 3px 25px #00000010;
+            position: relative;
+
+            &:first-of-type {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            &:last-of-type {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            &:before {
+                position: absolute;
+                content: "";
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(129deg, #2B7FFC, #6A11CB);
+                z-index: -1;
+                transition: opacity 0.3s linear;
+                opacity: 0;
+                border-radius: 10px;
+            }
+
+            &:hover {
+                color: $white-color;
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .rtpc-agent-view-sort-filters {
+            display: flex;
+            position: absolute;
+            right: 25px;
+
+            label {
+                border-radius: 10px;
+                @include font-size(23);
+                margin-left: 10px;
+                height: 38px;
+                width: 38px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                //padding: 5px 0 0 0;
+
+                &:hover {
+                    border: 5px;
+                }
+
+                i {
+                    @include font-size(21);
+                }
+            }
+
+            .rtpc-agent-sort {
+                box-shadow: 0 3px 25px #00000010;
+                padding: 7px 11px 2px 17px;
+                margin-left: 40px;
+                border-radius: 10px;
+
+                label {
+                    font-weight: bold;
+                }
+
+                span {
+                    color: #6A11CB;
+                }
+            }
+        }
+    }
+
+    .rtpc-agent-list-columns {
+        padding: 0 15px;
+
+        .rtpc-agent-list-column {
+            margin: 0px;
+            box-shadow: 0 3px 25px rgba(0, 0, 0, 0.14);
+            padding: 50px;
+            margin-bottom: 60px;
+
+            .rtpc-agent-contacts {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 20px 0;
+                margin: 0 15px;
+                border-top: 1px solid rgba(112, 112, 112, .25);
+
+                .rtpc-agent-details {
+                    padding: 10px 52px 10px 0;
+                    @include font-size(16);
+
+                    i {
+                        padding: 0 8px;
+                        color: #000000;
+
+                        &:hover {
+                            color: #6A11CB !important;
+                        }
+                    }
+
+                    .rtpc-agent-contact-title {
+                        padding-right: 10px;
+                        color: #000000;
+                    }
+
+                    .rtpc-agent-contact-content {
+                        font-weight: 500;
+                        color: rgba(70, 70, 70, 0.7);
+                    }
+                }
+            }
+
+            .rtpc-agent-footer {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 14px 0;
+
+                .rtpc-agent-agent-list {
+                    padding-top: 20px;
+
+                    a {
+                        margin: 0 7px;
+                        padding-top: 5px;
+                        display: inline-flex;
+
+                        img {
+                            width: 55px;
+                            height: 55px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                .rtpc-agent-listed-properties {
+                    a {
+                        color: #6A11CB;
+                        @include font-size(17);
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                * {
+                    text-align: center;
+                }
+
+                .rtpc-agent-contacts {
+                    justify-content: center;
+
+                    .rtpc-agent-details {
+                        padding: 10px 20px !important;
+
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 440px) {
+                .rtpc-agent-details {
+                    padding: 10px 0px !important;
+                }
+            }
+        }
+    }
+}

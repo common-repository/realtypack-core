@@ -1,0 +1,72 @@
+.rtpc-sp-mortgage-container {
+    border-radius: 5px;
+    background: #F6F6F6;
+    padding: 30px 30px;
+
+    .rtpc-sp-mortgage-form {
+        margin-top: 10px;
+
+        .rtpc-sp-mortgage-input {
+            margin-top: 19px;
+            position: relative;
+
+            label {
+                @include font-size(16);
+                font-weight: $medium;
+                color: #181818;
+            }
+
+            input,
+            textarea {
+                padding: 10px 20px;
+                margin-top: 8px;
+                border-color: #DEDEDE;
+            }
+
+            &:before {
+                @include font-size(20);
+                position: absolute;
+                right: 15px;
+                top: 45px;
+                color: #858585;
+                font-family: "rtp-fontastic";
+            }
+
+            &:nth-child(1)::before {
+                content: "\e20f";
+            }
+
+            &:nth-child(2)::before {
+                content: "\e2ce";
+            }
+
+            &:nth-child(3)::before {
+                font-family: "FontAwesome";
+                content: "\f295";
+            }
+
+            &:nth-child(4)::before {
+                content: "\e21d";
+            }
+        }
+
+        .rtp-main-button-blue {
+            margin-top: 36px;
+        }
+    }
+
+    .rtpc-sp-mortgage-calculated-values {
+        margin-top: 40px;
+        font-weight: $medium;
+        @include font-size(16);
+
+        div {
+            margin-bottom: 25px;
+
+            label {
+                display: block;
+            }
+        }
+
+    }
+}

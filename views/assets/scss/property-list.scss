@@ -1,0 +1,58 @@
+.rtp-property-list-container {
+    .rtp-property-list {
+        display: flex;
+        margin-top: 34px;
+
+        &:first-child {
+            margin-top: 45px;
+        }
+
+        img {
+            border-radius: 5px;
+            max-width: 150px;
+            max-height: 150px;
+            width: 100%;
+            height: 100%;
+            margin-right: 25px;
+            box-shadow: 0 8px 15px rgba($black-color, 0.16);
+        }
+
+        .rtp-property-list-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .rtp-property-list-cat {
+                color: #818181;
+                font-weight: $light;
+                @include font-size(15);
+                font-style: italic;
+                width: 100%;
+            }
+
+            .rtp-property-list-title {
+                @include font-size(21);
+                color: #181818;
+                font-weight: $regular;
+                display: block;
+                width: 100%;
+
+                &:hover {
+                    color: $default-purple;
+                }
+            }
+
+            .rtp-property-list-price {
+                @include font-size(24);
+                color: $default-purple;
+                font-weight: $semi-bold;
+                display: block;
+                width: 100%;
+
+                &:hover {
+                    color: $default-purple;
+                }
+            }
+        }
+    }
+}

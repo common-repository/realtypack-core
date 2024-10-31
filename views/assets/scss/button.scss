@@ -1,0 +1,87 @@
+.rtp-button {
+    .elementor-button {
+        position: relative;
+        text-align: left;
+        border-radius: 0px !important;
+        transition: $transition-fast;
+        z-index: 1;
+        transition: 0.3s linear;
+        display: inline-flex;
+        align-items: center;
+        height: 56px;
+
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            transition: opacity 0.3s linear;
+            opacity: 0;
+            background: linear-gradient(271deg, #434343, #111111);
+            transition: $transition-fast;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            margin-left: -25px;
+            top: 50%;
+            width: 50px;
+            height: 2px;
+            background: -webkit-gradient(linear, left top, right top, color-stop(50%, #6A11CB), color-stop(50%, white));
+            background: linear-gradient(90deg, #6A11CB 50%, white 50%);
+            transition: 0.3s linear;
+        }
+
+        .elementor-button-text {
+            padding: 0% 51px 0% 50px;
+            letter-spacing: 1px;
+            font-weight: $light;
+            @include font-size(16);
+            height: 100%;
+        }
+
+        &:hover {
+            &:before {
+                opacity: 1;
+                transition: $transition-fast;
+            }
+
+            &::after {
+                background: linear-gradient(90deg, #1A1A1A 50%, white 50%);
+
+            }
+        }
+
+        //Small Button
+        &.small {
+            height: 48px;
+
+            @include for-desktop {
+                height: 44px;
+            }
+
+            .elementor-button-text {
+                padding: 0% 24px 0% 41px;
+
+                @include for-desktop {
+                    padding: 100% 19px 100% 34px;
+                    @include font-size(14);
+                }
+            }
+
+            &:after {
+                width: 48px;
+                margin-left: -24px;
+
+                @include for-desktop {
+                    width: 44px;
+                    margin-left: -22px;
+                }
+            }
+        }
+    }
+}

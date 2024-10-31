@@ -1,0 +1,33 @@
+.rtpc-single-agency-title-container {
+
+    .rtpc-single-agency-title {
+        @include font-size(42);
+        font-weight: 500;
+        color: $white-color;
+        padding-bottom: 15px;
+    }
+
+    .rtpc-single-agency-address {
+        @include font-size(20);
+        font-weight: $light;
+        color: rgba($white-color, 0.65);
+        padding-bottom: 15px;
+
+        i {
+            font-family: "rtp-fontastic";
+            font-size: 20px;
+        }
+    }
+
+    .rtpc-single-agency-phone {
+        @include font-size(20);
+        font-weight: $light;
+        color: rgba($white-color, 0.65);
+
+        i {
+            font-family: "rtp-fontastic";
+            font-size: 20px;
+        }
+    }
+
+}

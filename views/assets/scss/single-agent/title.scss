@@ -1,0 +1,15 @@
+.rtpc-single-agent-title-container {
+    .rtpc-single-agent-title {
+        @include font-size(37);
+        font-weight: $medium;
+        padding-bottom: 5px;
+        color: $default-purple;
+    }
+
+    .rtpc-single-agent-address {
+        @include font-size(21);
+        font-weight: $light;
+        color: rgba(#464646, 0.8);
+        letter-spacing: 1px;
+    }
+}

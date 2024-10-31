@@ -1,0 +1,107 @@
+.rtpc-sp-agency-contact-container {
+    border-radius: 5px;
+    background: #F6F6F6;
+    padding: 50px 30px;
+    overflow: auto;
+
+    .rtpc-sp-agency-info-container {
+        display: flex;
+        padding-bottom: 27px;
+        border-bottom: 1px solid #C2C2C2;
+
+        img {
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+        }
+
+        .rtpc-sp-agency-info {
+            margin-left: 27px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .rtpc-sp-agency-info-title {
+                font-weight: $medium;
+                @include font-size(22);
+                color: #181818;
+            }
+
+            .rtpc-sp-agency-info-phone {
+                @include font-size(16);
+                font-weight: $light;
+                color: #373737;
+
+                i {
+                    color: #181818;
+                    font-family: "rtp-fontastic";
+                }
+            }
+
+            .rtpc-sp-agency-info-link {
+                @include font-size(15);
+                font-weight: $regular;
+                text-decoration: underline;
+                color: #6A11CB;
+            }
+        }
+    }
+
+    .rtpc-sp-agency-details {
+        @include font-size(15);
+        font-weight: $regular;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #C2C2C2;
+
+        p {
+            color: #6A6A6A;
+            margin-bottom: 25px;
+            line-height: 26px;
+        }
+
+        .rtpc-sp-agency-contact {
+            display: flex;
+            margin: 12px 0px;
+            flex-wrap: wrap;
+
+            label {
+                color: rgba(#181818, 0.7);
+            }
+
+            span {
+                color: #181818;
+                margin-left: 10px;
+            }
+
+            .rtpc-sp-agency-contact-socials {
+                display: flex;
+                color: #181818;
+                font-family: "rtp-fontastic";
+
+                a {
+                    margin-right: 12px;
+                    margin-top: 5px;
+
+                    &:hover {
+                        color: #6A11CB;
+                    }
+                }
+            }
+        }
+    }
+
+    .rtpc-sp-agency-contact-form {
+        margin-top: 10px;
+
+        input,
+        textarea {
+            padding: 10px 20px;
+            margin-top: 17px;
+            border-color: #DEDEDE;
+        }
+
+        .rtp-main-button-blue {
+            margin-top: 26px;
+        }
+    }
+}

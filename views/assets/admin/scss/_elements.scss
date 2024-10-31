@@ -1,0 +1,746 @@
+/*General Classes*/
+.rtpc-admin-clearfix {
+
+    &:after,
+    &:before {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.rtpc-admin-body {
+    padding: 95px 0
+}
+
+.rtpc-admin-flex {
+    display: flex;
+}
+
+.rtpc-admin-hidden {
+    display: none;
+}
+
+/*White box with shadow*/
+.rtpc-admin-box {
+    box-shadow: 0 3px 25px rgba(0, 0, 0, 0.1);
+    background-color: $white-color;
+    border-radius: 10px;
+
+    &.type1 {
+        padding: 40px 51px;
+        margin-bottom: 45px;
+    }
+
+    &.type2 {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    &.type3 {
+        padding: 35px;
+        margin-bottom: 30px;
+    }
+
+    &.type4 {
+        padding: 60px 0;
+    }
+
+    img {
+        margin: auto;
+        display: block;
+    }
+}
+
+.rtpc-admin-box-inner {
+    padding: 0 60px;
+}
+
+.rtpc-admin-box-title {
+    color: $text-color;
+
+    &.blue {
+        color: $main-color;
+    }
+
+    &.red {
+        color: #E51B60;
+    }
+}
+
+/*Separator*/
+.rtpc-admin-box-separator {
+    height: 1px;
+    width: 100%;
+    background-color: $text-color;
+    display: block;
+    margin: 12px 0 30px 0;
+
+    &.blue {
+        background-color: $main-color;
+        box-shadow: 0 1px 12px $main-color;
+    }
+
+    &.red {
+        background-color: #E51B60;
+        box-shadow: 0 1px 12px #E51B60;
+    }
+}
+
+/*button*/
+/* @temprory it should be fix for import demo button */
+.rtpc-admin-import-button {
+    width: 100%;
+}
+
+.rtpc-admin-btn {
+    box-sizing: border-box;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
+    padding: 12px 20px;
+    border-radius: 38px;
+    background-color: $text-color;
+    color: $white-color !important;
+    font-size: 15px;
+    line-height: 23px;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-align: center;
+    z-index: 1;
+    transition: 0.3s;
+    position: relative;
+    text-decoration: none !important;
+
+    &:hover {
+        color: $white-color !important;
+
+        &::before {
+            opacity: 1;
+            transition: 0.3s;
+        }
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0;
+        transition: 0.3s;
+        border-radius: 38px;
+    }
+
+    &.small {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 14px;
+    }
+
+    &.lowercase {
+        text-transform: initial;
+    }
+
+    &.square {
+        border-radius: 0;
+    }
+
+    &.black {
+        background: linear-gradient(to bottom, #232323 0%, #505050 100%);
+        box-shadow: 0 7px 20px rgba(0, 0, 0, 0.23);
+
+        &::before {
+            background: linear-gradient(to top, #232323 0%, #505050 100%);
+        }
+
+        &:hover {
+            color: $white-color;
+        }
+    }
+
+    &.blue {
+        background: linear-gradient(to bottom, #2B7FFC 0%, #6A11CB 100%);
+        box-shadow: 0 7px 20px rgba(55, 106, 243, 0.5);
+
+        &::before {
+            background: linear-gradient(to top, #2B7FFC 0%, #6A11CB 100%);
+        }
+
+        &:hover {
+            color: $white-color;
+        }
+
+        &.vertical-gradiant {
+            background: linear-gradient(to right, #2B7FFC 0%, #6A11CB 100%);
+            width: 100%;
+        }
+    }
+
+    &.green {
+        background: linear-gradient(to bottom, #34CB6B 0%, #0B8B2D 100%);
+        box-shadow: 0 7px 20px rgba(16, 174, 60, 0.5);
+
+        &::before {
+            background: linear-gradient(to top, #34CB6B 0%, #0B8B2D 100%);
+        }
+
+        &:hover {
+            color: $white-color;
+        }
+    }
+
+    &.gray {
+        background: #C4C4C4;
+        box-shadow: none;
+
+        &:hover {
+            color: $white-color;
+            background: #C4C4C4;
+            transition: 0.3s;
+            cursor: not-allowed;
+        }
+    }
+
+    &.white {
+        background-color: $white-color;
+        color: $black-color;
+        border: 2px solid $content-color;
+        box-sizing: border-box;
+    }
+
+}
+
+/*Admin Box footer*/
+.rtpc-admin-box-footer {
+    padding: 32px 0 5px 0;
+
+    .rtpc-admin-btn {
+        margin-left: 8px;
+
+        @include for-desktop {
+            margin-left: 5px;
+        }
+
+        @include for-tablet {
+            margin-left: 0px;
+            margin-top: 10px;
+        }
+    }
+}
+
+.rtpc-admin-box-footer-title {
+    float: left;
+    padding: 8px 0;
+    font-size: 20px;
+    line-height: 30px;
+
+    &.no-padding {
+        padding: 0;
+    }
+
+    @include for-desktop {
+        font-size: 15px;
+    }
+
+    @include for-tablet {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    @media (min-width:999px) and (max-width:1300px) {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.rtpc-admin-box-footer-subtitle {
+    display: block;
+    color: $dark-gray-color;
+    font-size: 15px;
+    line-height: 20px;
+
+    @include for-desktop {
+        font-size: 11px;
+        line-height: 15px;
+    }
+}
+
+.rtpc-admin-box-footer-btns {
+    position: relative;
+    float: right;
+
+    .rtpc-admin-btn {
+        @include for-desktop {
+            font-size: 12px;
+            padding: 10px 15px;
+        }
+    }
+
+    @include for-tablet {
+        float: none;
+        width: 100%;
+        text-align: center;
+        clear: both;
+    }
+
+    @media (min-width:999px) and (max-width:1300px) {
+        float: none;
+        width: 100%;
+        text-align: center;
+        clear: both;
+    }
+}
+
+/*popup*/
+.rtpc-admin-popup {
+    width: 960px;
+    //top:200px;
+    background: $white-color;
+
+    @include for-tablet-land {
+        width: 100%;
+        left: 0;
+    }
+
+    @include for-tablet {
+        width: 100%;
+        left: 0;
+    }
+}
+
+.rtpc-admin-importer-form-sidebar {
+    padding: 24px !important;
+    background: linear-gradient(to top, $second-color 0%, $main-color 100%);
+    box-shadow: 0 0 35px rgba(46, 121, 249, 0.5);
+
+    .rtpc-admin-box-footer-title {
+        color: $white-color;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
+
+.rtpc-admin-importer-form-content {
+    padding: 50px !important;
+}
+
+.rtpc-admin-form-title {
+    border-bottom: 1px solid $gray-color;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+
+    .rtpc-admin-form-title-text {
+        float: left;
+        padding: 11px 0;
+    }
+
+    .rtpc-admin-btn {
+        float: right
+    }
+}
+
+.rtpc-admin-form-title-text {
+    font-size: 18px;
+}
+
+.rtpc-admin-form-plugin-list {
+
+    &>li {
+        position: relative;
+        margin-bottom: 10px;
+
+        &:after {
+            content: "";
+            height: 1px;
+            width: 100%;
+            background-color: $gray-color;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: 1;
+        }
+
+        .title {
+            float: left;
+            position: relative;
+            padding: 5px 20px 5px 0;
+            z-index: 2;
+            background-color: $white-color;
+            color: $content-color-3;
+            font-size: 15px;
+        }
+
+        .btn {
+            position: relative;
+            float: right;
+            z-index: 2;
+            padding-left: 20px;
+            background-color: $white-color;
+        }
+
+        .gray {
+            cursor: not-allowed;
+            color: $gray-color;
+        }
+
+        .blue {
+            cursor: pointer;
+            color: $blue-color;
+        }
+    }
+}
+
+.rtpc-admin-form-separator {
+    padding: 45px 0;
+}
+
+.rtpc-admin-form-checkbox-list {
+    &>li {
+        padding: 0 10px 22px 0;
+        color: $content-color-3;
+        font-size: 15px;
+    }
+}
+
+.rtpc-admin-wizard-step-progress-bar {
+    img {
+        margin-bottom: 35px;
+    }
+
+    .rtpc-admin-progress-bar {
+        margin-bottom: 35px;
+    }
+}
+
+.rtpc-admin-progress-bar {
+    color: $content-color-3;
+
+    .text {
+        float: left;
+    }
+
+    .percent {
+        float: right;
+    }
+}
+
+.progressbar {
+    margin-bottom: 30px;
+    background-color: $white-color;
+    border-radius: 50px;
+
+    .ui-progressbar-value {
+        border-radius: 50px;
+        height: 12px;
+        background: linear-gradient(to right, #408AF6 0%, #8D35EE 100%);
+    }
+}
+
+.rtpc-admin-box-shadow {
+    box-shadow: 0 3px 25px rgba(0, 0, 0, 0.16);
+}
+
+.rtpc-admin-wizard-finalize {
+    margin: 20px 0;
+    text-align: center;
+
+    &>span {
+        display: block;
+        text-align: center
+    }
+
+    .percent {
+        color: $green-color;
+        font-size: 46px;
+        line-height: 64px;
+
+    }
+
+    .congrats {
+        color: $green-color;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .text {
+        color: $content-color;
+    }
+
+}
+
+.rtpc-admin-wizard-finalize-btns {
+    text-align: center;
+
+    .rtpc-admin-btn {
+        margin: 0 10px;
+
+        &.white {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+
+.realtypack_page_realty-pack-core-importer {
+    .featherlight-content {
+        .featherlight-close-icon {
+            width: unset;
+            background: transparent;
+            color: #2e2e2e;
+        }
+    }
+}
+
+.featherlight-content {
+    padding: 0 !important;
+    border-bottom: 0 !important;
+    //width: 90%;
+    max-width: 1600px;
+
+    .featherlight-close-icon {
+        width: 100%;
+        text-align: right;
+        padding-right: 27px;
+        background: #6A11CB;
+        height: 55px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .rtpc-single-builder-continer {
+        padding: 60px 0px;
+        background-size: 70% 60%;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-image: url("../img/new-template-bg.png");
+        overflow: auto;
+
+        .rtpc-new-sp-header {
+            z-index: 9999;
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+            position: absolute;
+            top: 17px;
+            left: 40px;
+        }
+
+        .rtpc-new-sp-content {
+            padding: 80px 110px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+
+            .rtpc-new-sp-content-data {
+                padding-right: 110px;
+                padding-left: 110px;
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: 500;
+                    padding-left: 98px;
+                    position: relative;
+                    letter-spacing: 3.8px;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 10px;
+                        width: 80px;
+                        height: 2px;
+                        background: #6A11CB;
+                        box-shadow: 0 3px 35px #6A11CB;
+                    }
+                }
+
+                h2 {
+                    font-size: 56px;
+                    font-weight: 500;
+                    line-height: normal;
+                    margin: 31px 0 36px 0px;
+                    letter-spacing: 3px;
+                }
+
+                p {
+                    font-size: 16px;
+                    color: rgba(#333333, 0.7);
+                }
+            }
+
+            .rtpc-new-sp-content-form-container {
+                padding: 0px;
+
+                .rtpc-new-sp-content-form {
+                    margin: 20px auto;
+                    width: 527px;
+                    box-shadow: 0 3px 35px rgba(0, 0, 0, 0.16);
+                    border-radius: 5px;
+                    padding: 60px 54px;
+                    background: #fff;
+
+                    .rtpc-new-sp-content-form-header {
+                        font-size: 26px;
+                        color: #6A11CB;
+                        font-weight: 500;
+                        padding-bottom: 30px;
+                        border-bottom: 1px solid rgba(#000, 0.16);
+                    }
+
+                    .rtpc-template-type-select-label,
+                    .rtpc-title-label {
+                        display: block;
+                        font-size: 16px;
+                        color: #505050;
+                        margin-bottom: 10px;
+                        margin-top: 30px;
+
+                    }
+
+                    .rtpc-select-cointainer {
+                        position: relative;
+
+                        &::after {
+                            content: "\f347";
+                            font-family: "Dashicons";
+                            width: 30px;
+                            height: 25px;
+                            position: absolute;
+                            font-size: 20px;
+                            right: 5px;
+                            top: 52px;
+                            background: #fff;
+                        }
+                    }
+
+                    .rtpc-template-type-select,
+                    input {
+                        width: 100%;
+                        border-radius: 5px;
+                        height: 50px;
+                        border-color: rgba(0, 0, 0, 0.16);
+                        margin-top: 10px;
+                        padding-left: 20px;
+                    }
+
+
+                    .rtpc-new-sp-button {
+                        background: linear-gradient(180deg, #2B7FFC, #6A11CB);
+                        border-radius: 5px;
+                        height: 53px;
+                        color: rgba(#000000, 0.5);
+                        font-weight: 300;
+                        text-align: center;
+                        font-size: 16px;
+                        margin-top: 30px;
+
+                        span {
+                            line-height: 50px;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Grid*/
+.rtpc-admin-box-inner-padding {
+    padding: 60px;
+}
+
+.rtpc-admin-grid {
+    width: 100%;
+    color: $content-color-3;
+
+    tr {
+        &:nth-child(2n+1) {
+            background-color: $light-gray-color;
+        }
+    }
+
+    td {
+        padding: 10px;
+
+        &:first-child {
+            padding-left: 60px;
+        }
+    }
+
+    a {
+        color: $blue-color;
+        text-decoration: underline;
+    }
+}
+
+.rtpc-admin-separator {
+    padding-top: 50px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid $content-color;
+}
+
+.rtpc-admin-grid-title {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.rtpc-admin-grid-tag {
+    padding: 3px 16px;
+    color: $white-color;
+    background-color: $gray-color;
+    border-radius: 5px;
+    text-align: center;
+
+    &.green {
+        background-color: $green-color;
+    }
+
+    &.red {
+        background-color: $red-color;
+    }
+}
+
+.rtpc-admin-grid-label-column {
+    width: 400px;
+
+    @include for-tablet-land {
+        width: auto;
+    }
+
+    @include for-tablet {
+        width: auto;
+    }
+}
+
+.rtpc-admin-grid-tag-column {
+    width: 200px;
+
+    @include for-tablet-land {
+        width: auto;
+    }
+
+    @include for-tablet {
+        width: auto;
+    }
+}
+
+.rtpc-admin-grid-status-column {
+    width: 300px;
+
+    @include for-tablet-land {
+        width: auto;
+    }
+
+    @include for-tablet {
+        width: auto;
+    }
+}
